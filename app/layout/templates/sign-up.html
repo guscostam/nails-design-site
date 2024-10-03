@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milena Nails Design - Cadastro</title>
+    <link rel="stylesheet" href="../static/css/sign-up.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="container">
+        <form class="login-form" action="/sign-up" method="post">
+            <h1>Cadastre-se na melhor manicure da região</h1>
+            <div class="input-group">
+                <input type="text" id="sign-up name" name="sign-up name" placeholder="Nome" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="sign-up lastname" name="sign-up lastname" placeholder="Sobrenome" required>
+            </div>
+            <div class="input-group">
+                <input type="email" id="sign-up email" name="sign-up email" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um e-mail válido." required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="sign-up password" name="sign-up password" placeholder="Senha" pattern="(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,}" title="A senha deve ter no mínimo 6 caracteres, pelo menos uma letra maiúscula e um caractere especial" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="sign-up confirm-password" name="sign-up confirm-password" placeholder="Confirmar Senha" required>
+            </div>
+            <button type="submit">Cadastrar</button>
+            <p class="signup-link">Já tem uma conta? <a href="{{ url_for('login.index_login') }}">Faça login</a></p>
+        </form>
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

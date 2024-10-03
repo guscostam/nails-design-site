@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lobster', cursive;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    perspective: 1000px;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    transform: translateY(50px) scale(0.9);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+body.loaded .login-form {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.login-form h1 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: #333;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    width: 100%;
+}
+
+body.loaded .input-group {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.input-group input {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #e49fc5;
+}
+
+.input-group input:hover {
+    border-color: #e49fc5;
+    box-shadow: 0 0 10px rgba(255, 107, 129, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #e49fc5, #e49fc5);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.signup-link,
+.forgot-password {
+    margin-top: 20px;
+    color: #666;
+}
+
+.signup-link a,
+.forgot-password a {
+    color: #e49fc5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover,
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-image: url('../img/background1.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 600px) {
+    .login-form {
+        padding: 40px;
+    }
+    
+    .login-form h1 {
+        font-size: 30px;
+    }
+    
+    .login-form h2 {
+        font-size: 20px;
+    }
+}

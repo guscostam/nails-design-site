@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vinda à Nossa Loja de Roupas Femininas</title>
+    <link rel="stylesheet" href="../static/css/system_index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('login.dashboard') }}">Início</a></li>
+                    <li><a href="{{ url_for('system_index.products') }}">Produtos</a></li>
+                    <li><a href="{{ url_for('system_index.clients') }}">Clientes</a></li>
+                    <li><a href="{{ url_for('system_index.reports') }}">Relatórios</a></li>
+                    <li><a href="{{ url_for('login.logout') }}">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Seja Bem-Vindo(a), {{ name }}</h2>
+            <p>Descubra as últimas tendências em moda feminina.</p>
+            <a href="https://www.instagram.com/ellazaffiro/" class="btn" target="_blank">Explore Agora</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section contact">
+                    <h3>Contato</h3>
+                    <span><i class="fas fa-phone"></i> (14) 99896-0719</span>
+                    <span><i class="fas fa-envelope"></i> isaferreiranacimbem@gmail.com</span>
+                </div>
+                <div class="footer-section social">
+                    <h3>Siga-nos</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/ellazaffiro/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ellazaffiro/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://vm.tiktok.com/ZMLuyt17p/" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://youtube.com/channel/UC_HMYKrlZzjuoXn4qJcF-YQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
