@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Horário</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/scheduling.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-calendar-check"></i> Agende seu Horário</h1>
+        <p>Preencha os campos abaixo para escolher o melhor horário para seu atendimento.</p>
+    </header>
+
+    <div class="hero">
+        <div class="form-container">
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="date">Data:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="time">Hora:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+
+                <div class="button-container">
+                    <button type="submit" class="btn"><i class="fas fa-check"></i> Confirmar Agendamento</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact">
+                <h3>Contato</h3>
+                <span><i class="fas fa-phone"></i> (14) 99765-9253</span>
+                <span><i class="fas fa-user"></i> Mileni</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

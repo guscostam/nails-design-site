@@ -15,11 +15,9 @@
         <div class="container">
             <nav>
                 <ul>
-                    <li><a href="">Início</a></li>
-                    <li><a href="">Produtos</a></li>
-                    <li><a href="">Clientes</a></li>
-                    <li><a href="">Relatórios</a></li>
-                    <li><a href="">Sair</a></li>
+                    <li><a href="{{ url_for('login.dashboard') }}">Início</a></li>
+                    <li><a href="{{ url_for('system_index.scheduling') }}">Agendamento de Horários</a></li>
+                    <li><a href="{{ url_for('login.logout') }}">Sair</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,8 +26,8 @@
     <section class="hero">
         <div class="container">
             <h2>Seja Bem-Vindo(a), {{ name }}</h2>
-            <p>Descubra as últimas tendências em moda feminina.</p>
-            <a href="https://www.instagram.com/ellazaffiro/" class="btn" target="_blank">Explore Agora</a>
+            <p>Confira nossos serviços!</p>
+            <a href="{{ url_for('system_index.products') }}" class="btn">Explore Agora</a>
         </div>
     </section>
 
@@ -38,8 +36,8 @@
             <div class="footer-content">
                 <div class="footer-section contact">
                     <h3>Contato</h3>
-                    <span><i class="fas fa-phone"></i> (14) 99896-0719</span>
-                    <span><i class="fas fa-envelope"></i> isaferreiranacimbem@gmail.com</span>
+                    <span><i class="fas fa-phone"></i> (14) 99765-9253</span>
+                    <span><i class="fas fa-user"></i> Mileni</span>
                 </div>
                 <div class="footer-section social">
                     <h3>Siga-nos</h3>
